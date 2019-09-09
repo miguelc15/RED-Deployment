@@ -6,6 +6,7 @@ RED Delivery System
 Faculty Advisor: Markus Wilde - mwilde@fit.edu
 
 Team Members:
+
 Andrea Swanson - Software Lead
 aswanson2016@my.fit.edu
 
