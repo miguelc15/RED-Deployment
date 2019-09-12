@@ -3,7 +3,7 @@
 RED Delivery System
 (Recovery and Deployment System)
 
-Faculty Advisor: Markus Wilde - mwilde@fit.edu
+Faculty Advisor: Siddhartha (Sid) Bhattacharyya sbhattacharyya@fit.edu
 
 
 
