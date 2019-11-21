@@ -4,6 +4,8 @@ from sys import stdin, stdout
 
 def initialization():
     print("Entering Initialization State")
+    print 'Connecting to vehicle on '
+    vehicle = connect('/dev/ttyS0', wait_ready=True, baud=921600)
     # complete setup steps
     if attempt_transition(synchronizedTargetPursuit):
         return synchronizedTargetPursuit
@@ -78,10 +80,13 @@ def synchronizedHoming():
 
 def contigencyLanding():
     print("Entering Contingency Landing")
+    print('Return to launch')
+    vehicle.mode = VehicleMode("RTL")
 
 
 def start_rotors():
     print("starting rotors..")
+    
     # start up the rotors to prepare for deployment
 
 def fly_to_target(long, lat, alt):
@@ -130,7 +135,13 @@ def docking_flight():
     # send commands to go slow while multirotor gets ready to dock
 
 def fly_home():
-    # send commands to fly home at full speed
+  print('Return to launch')
+  vehicle.mode = VehicleMode("RTL")
+  print("Now let's land")
+  vehicle.mode = VehicleMode("LAND")
+  print("Close vehicle object")
+  vehicle.close()
+  # send commands to fly home at full speed
 
 print("Enter GPS Location:")
 targetLong, targetLat, targetAlt = map(int, stdin.readline().split())
