@@ -1,7 +1,7 @@
 # state machine to represent the requirements of the mothership for
 # mission phases
 from sys import stdin, stdout
-
+from firebas import firebase 
 def initialization():
     print("Entering Initialization State")
     print 'Connecting to vehicle on '
